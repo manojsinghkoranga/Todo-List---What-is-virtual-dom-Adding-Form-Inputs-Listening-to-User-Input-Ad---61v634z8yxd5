@@ -9,6 +9,9 @@ function App() {
 
 	const handleAddTodo = (event) => {
 		event.preventDefault();
+		if(todo === ""){
+			return;
+		}
 		const obj = {task: todo}
 		
 		setTodoList([...TodoList, obj]);
